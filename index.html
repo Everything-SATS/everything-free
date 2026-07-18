@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Everything Free</title>
+<meta name="theme-color" content="#141418">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Everything Free">
+<style>
+  :root {
+    --bg: #FAF9F6; --surface: #FFFFFF; --ink: #17181C; --ink-soft: #6B6D76; --line: #E7E5DF;
+    --shadow: 0 8px 24px rgba(20,20,30,0.08);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #131317; --surface: #1B1B21; --ink: #F2F1EE; --ink-soft: #9C9CA6; --line: #2A2A32;
+      --shadow: 0 8px 24px rgba(0,0,0,0.4); }
+  }
+  :root[data-theme="dark"] { --bg: #131317; --surface: #1B1B21; --ink: #F2F1EE; --ink-soft: #9C9CA6; --line: #2A2A32;
+    --shadow: 0 8px 24px rgba(0,0,0,0.4); }
+  :root[data-theme="light"] { --bg: #FAF9F6; --surface: #FFFFFF; --ink: #17181C; --ink-soft: #6B6D76; --line: #E7E5DF;
+    --shadow: 0 8px 24px rgba(20,20,30,0.08); }
+
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html, body { margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--ink); font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 44px 20px 60px; }
+
+  header { text-align: center; margin-bottom: 40px; }
+  header .eyebrow { font-size: 0.74rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-soft); }
+  header h1 { font-size: clamp(2.2rem, 7vw, 3.4rem); margin: 10px 0 12px; font-weight: 900; letter-spacing: -0.02em;
+    text-wrap: balance; }
+  header p { color: var(--ink-soft); font-size: 1.02rem; max-width: 480px; margin: 0 auto; line-height: 1.55; }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 18px; }
+
+  .app-card { display: block; text-decoration: none; color: inherit; background: var(--surface); border: 1px solid var(--line);
+    border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); transition: transform 0.15s ease; position: relative; }
+  .app-card:active { transform: scale(0.98); }
+  .app-card .ac-bar { height: 64px; display: flex; align-items: center; padding: 0 18px; }
+  .app-card .ac-icon { font-size: 1.9rem; }
+  .app-card .ac-body { padding: 16px 18px 20px; }
+  .app-card .ac-name { font-size: 1.12rem; font-weight: 900; margin-bottom: 6px; }
+  .app-card .ac-desc { font-size: 0.85rem; color: var(--ink-soft); line-height: 1.5; margin-bottom: 14px; min-height: 3.2em; }
+  .app-card .ac-open { font-size: 0.78rem; font-weight: 800; display: inline-flex; align-items: center; gap: 4px; }
+
+  .footer-note { text-align: center; color: var(--ink-soft); font-size: 0.8rem; margin-top: 46px; line-height: 1.7; }
+
+  @media (hover: hover) {
+    .app-card:hover { transform: translateY(-2px); }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">A small, growing collection</div>
+    <h1>Everything Free</h1>
+    <p>Nine apps built for the family. No logins, no subscriptions, no adverts — everything here stays free.</p>
+  </header>
+
+  <div class="grid">
+    <a class="app-card" href="https://everything-sats.github.io/" target="_blank" rel="noopener">
+      <div class="ac-bar" style="background:linear-gradient(120deg,#178077,#22A297)"><span class="ac-icon">📘</span></div>
+      <div class="ac-body">
+        <div class="ac-name">Everything SATS</div>
+        <div class="ac-desc">Free UK Year 6 SATs revision — every paper, every topic, built for every kind of learner.</div>
+        <div class="ac-open" style="color:#178077">Open →</div>
+      </div>
+    </a>
+
+    <a class="app-card" href="https://everything-sats.github.io/liv-golf-stats/" target="_blank" rel="noopener">
+      <div class="ac-bar" style="background:linear-gradient(120deg,#0A1E3F,#1F3D6B)"><span class="ac-icon">🏌️</span></div>
+      <div class="ac-body">
+        <div class="ac-name">LIV Golf Stats</div>
+        <div class="ac-desc">Every LIV Golf player, real 2026 season stats, plus a photo diary and gold autograph capture for matchday.</div>
+        <div class="ac-open" style="color:#B8901F">Open →</div>
+      </div>
+    </a>
+
+    <a class="app-card" href="https://everything-sats.github.io/golf-tracker/" target="_blank" rel="noopener">
+      <div class="ac-bar" style="background:linear-gradient(120deg,#0E1A12,#2E5C39)"><span class="ac-icon">⛳</span></div>
+      <div class="ac-body">
+        <div class="ac-name">Golf Shot Tracker</div>
+        <div class="ac-desc">A GPS rangefinder and shot tracker for your own rounds — one tap per shot, club stats built in.</div>
+        <div class="ac-open" style="color:#4CAF50">Open →</div>
+      </div>
+    </a>
+
+    <a class="app-card" href="https://everything-sats.github.io/block-crush/" target="_blank" rel="noopener">
+      <div class="ac-bar" style="background:linear-gradient(120deg,#171522,#3B2E6B)"><span class="ac-icon">🧩</span></div>
+      <div class="ac-body">
+        <div class="ac-name">Block Crush</div>
+        <div class="ac-desc">Drag-and-drop grid puzzle with 200 levels and fireworks when you level up. No adverts, not now, not ever.</div>
+        <div class="ac-open" style="color:#7C5CFF">Open →</div>
+      </div>
+    </a>
+
+    <a class="app-card" href="https://everything-sats.github.io/dutch-trainer/" target="_blank" rel="noopener">
+      <div class="ac-bar" style="background:linear-gradient(120deg,#F2762E,#F4954F)"><span class="ac-icon">🌷</span></div>
+      <div class="ac-body">
+        <div class="ac-name">Dutch in Two Weeks</div>
+        <div class="ac-desc">An intensive Dutch language trainer built for your own pace — no daily streak pressure.</div>
+        <div class="ac-open" style="color:#F2762E">Open →</div>
+      </div>
+    </a>
+
+    <a class="app-card" href="https://everything-sats.github.io/ideas/" target="_blank" rel="noopener">
+      <div class="ac-bar" style="background:linear-gradient(120deg,#E8543E,#F07A63)"><span class="ac-icon">🎙️</span></div>
+      <div class="ac-body">
+        <div class="ac-name">Ideas</div>
+        <div class="ac-desc">One-tap voice notes. Record a thought, find it again in seconds, floating-window support on desktop.</div>
+        <div class="ac-open" style="color:#E8543E">Open →</div>
+      </div>
+    </a>
+
+    <a class="app-card" href="https://magik-brix.github.io/" target="_blank" rel="noopener">
+      <div class="ac-bar" style="background:linear-gradient(120deg,#D63A3A,#E8654F)"><span class="ac-icon">🧱</span></div>
+      <div class="ac-body">
+        <div class="ac-name">Magik Brix</div>
+        <div class="ac-desc">Type anything, or paste any emoji — watch it turn into bricks you can recolour and build with.</div>
+        <div class="ac-open" style="color:#D63A3A">Open →</div>
+      </div>
+    </a>
+
+    <a class="app-card" href="https://ocean-loves-dance.github.io/" target="_blank" rel="noopener">
+      <div class="ac-bar" style="background:linear-gradient(120deg,#D6538C,#E38FB8)"><span class="ac-icon">💃</span></div>
+      <div class="ac-body">
+        <div class="ac-name">Ocean's Dance Diary</div>
+        <div class="ac-desc">A dance-class diary, calendar and achievement tracker, built just for Ocean.</div>
+        <div class="ac-open" style="color:#D6538C">Open →</div>
+      </div>
+    </a>
+
+    <a class="app-card" href="http://alltimediary.com/" target="_blank" rel="noopener">
+      <div class="ac-bar" style="background:linear-gradient(120deg,#7A5FD9,#9C86E8)"><span class="ac-icon">⏱️</span></div>
+      <div class="ac-body">
+        <div class="ac-name">AllTime</div>
+        <div class="ac-desc">Every activity, every moment — one record, for life. A multi-activity diary and achievement app.</div>
+        <div class="ac-open" style="color:#7A5FD9">Open →</div>
+      </div>
+    </a>
+  </div>
+
+  <div class="footer-note">
+    Built one request at a time. Everything on this page runs entirely in your browser — nothing is uploaded<br>
+    anywhere except what each app tells you about (like GPS or camera access), and every app stores its data only on your own device.
+  </div>
+</div>
+
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("sw.js", { scope: "/everything-free/" }).catch(() => {});
+}
+</script>
+</body>
+</html>
